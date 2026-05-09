@@ -2,13 +2,10 @@
   "name": "loop-saints",
   "version": "1.0.0",
   "private": true,
-  "description": "Southampton FC StadiumLoop — matchday companion app delivered via NFC tap. Single-file HTML + assets, served as a static site.",
+  "description": "Southampton FC StadiumLoop — matchday companion app delivered via NFC tap. Single-file HTML + assets, served via a tiny zero-dependency Node static server.",
   "scripts": {
-    "start": "serve -s . -l tcp://0.0.0.0:${PORT:-3000} -c serve.json",
-    "dev": "serve -s . -l 3000 -c serve.json"
-  },
-  "dependencies": {
-    "serve": "^14.2.4"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "engines": {
     "node": ">=18"
