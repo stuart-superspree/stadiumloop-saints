@@ -1556,17 +1556,17 @@ body.lg .vote-name, body.lg .menu-name, body.lg .archive-headline { font-size: 1
   padding: 4px 4px max(env(safe-area-inset-bottom),6px);
 }
 .nav-slot {
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: 7px 2px 5px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 8px 2px 6px;
   background: transparent;
   border-top: 2.5px solid transparent;
-  font-size: 9.5px; font-weight: 600;
-  color: var(--ink-muted);
+  font-size: 10px; font-weight: 700;
+  color: var(--ink-soft);
   letter-spacing: 0.04em;
-  min-height: 44px;
+  min-height: 48px;
   transition: color 0.15s, border-top-color 0.15s;
 }
-.nav-slot svg { width: 17px; height: 17px; }
+.nav-slot svg { width: 19px; height: 19px; }
 .nav-slot.active { color: var(--primary); border-top-color: var(--primary); font-weight: 800; }
 .nav-slot:active { transform: scale(0.95); }
 
@@ -1665,13 +1665,18 @@ body.lg .vote-name, body.lg .menu-name, body.lg .archive-headline { font-size: 1
   width: 100%; max-width: 430px;
   background: var(--paper);
   border-radius: 20px 20px 0 0;
-  box-shadow: 0 -16px 60px rgba(0,0,0,0.25);
+  /* No box-shadow here — shadow only fires when .show, otherwise the
+     downward-translated sheet's top shadow leaks 60px UP into the
+     viewport and darkens the bottom navigation. */
   max-height: 86vh; display: flex; flex-direction: column;
   z-index: 61;
-  transition: transform 0.30s var(--ease);
+  transition: transform 0.30s var(--ease), box-shadow 0.30s var(--ease);
   padding-bottom: env(safe-area-inset-bottom, 0);
 }
-.sheet.show { transform: translate(-50%, 0); }
+.sheet.show {
+  transform: translate(-50%, 0);
+  box-shadow: 0 -16px 60px rgba(0,0,0,0.25);
+}
 .sheet-grip { width: 38px; height: 4px; background: var(--border); border-radius: 2px; margin: 8px auto 0; flex-shrink: 0; }
 .sheet-head {
   padding: 12px 18px 10px;
