@@ -1,0 +1,40 @@
+{
+  "name": "Saints matchday · St Mary's",
+  "short_name": "Saints",
+  "description": "Southampton FC matchday companion. Tap, vote, listen, give — no download required.",
+  "start_url": "./southampton-stmarys-loop.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#A8131A",
+  "background_color": "#A8131A",
+  "lang": "en-GB",
+  "dir": "ltr",
+  "categories": ["sports", "entertainment", "lifestyle"],
+  "icons": [
+    {
+      "src": "southampton-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "southampton-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "southampton-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "southampton-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
